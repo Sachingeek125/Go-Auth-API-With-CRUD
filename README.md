@@ -31,48 +31,6 @@ you can test this APIs through postman on URL: http://localhost:8080
 - /logout(GET): If you wants to logout from your account then you have to enter session-ID into header into header with including a new field named Session-ID.then if your session-ID is valid then it will delete that session from mongodb and will give you the message that session-ID deleted.
 
 
+# CRUD With AUTH
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// count, err := collection.CountDocuments(context.Background(), bson.M{"_userid": userobjID})
-
-	// if err != nil {
-	// 	return nil, err
-	// }
-
-	// if count > 0 {
-	// 	log.Println("User already exists.")
-	// 	return nil, nil
-	// }
-
-	// if err!=nil {
-	// 	return nil,err
-	// }
-
-	// if (result) {
-	// 	re
-	// }
+- so here i've created an admin functionality to change and see details of the all users into a db.where we are retriving a latest session ID from session-db and then decoding a latest user from it and then check if it's admin or user of which details are being requested for update or view or delete.if it's authenticated then move ahead otherwise it will give forbidden message.
